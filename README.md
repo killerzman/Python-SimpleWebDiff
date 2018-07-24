@@ -12,6 +12,7 @@ Fast, simple and configurable check for website changes
 Python 3 required
 
     git clone https://github.com/killerzman/SimpleWebDiff.git
+    cd SimpleWebDiff
     pip install -r requirements.txt
 
 # Usage
