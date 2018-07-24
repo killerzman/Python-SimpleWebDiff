@@ -55,7 +55,7 @@ def parse_args(args):
             if is_url(args[i]):
                 link = str(args[i])
                 link_found = True
-        elif args[i] == '-r':
+        if args[i] == '-r':
             r = True
         elif args[i] == '-o':
             o = True
@@ -128,6 +128,7 @@ def main():
         print("usage: python " + str(sys.argv[0]) + " -flags <website_url>")
         print("IMPORTANT! THIS IS ONLY USEFUL FOR MOSTLY STATIC WEBPAGES!")
         print("THIS IS VERY SENSITIVE TO EVEN BITS OF INFORMATION BEING CHANGED!")
+        print("DOES NOT SHOW ACTUAL CHANGES, JUST CHECKS FOR THEM!")
         print("")
         print("<website_url>: the website to check for differences")
         print("")
