@@ -1,14 +1,17 @@
 ﻿# SimpleWebDiff
 
 Fast, simple and configurable check for website changes
+
 **IMPORTANT! THIS IS ONLY USEFUL FOR MOSTLY STATIC WEBPAGES!**
+
 **THIS IS VERY SENSITIVE TO EVEN BITS OF INFORMATION BEING CHANGED!**
+
 **DOES NOT SHOW ACTUAL CHANGES, JUST CHECKS FOR THEM!**
 
 # Install
 Python 3 required
 
-    git clone
+    git clone https://github.com/killerzman/SimpleWebDiff.git
     pip install -r requirements.txt
 
 # Usage
