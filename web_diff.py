@@ -2,9 +2,9 @@ import re
 import requests
 import subprocess
 import sys
+import time
 import warnings
 import webbrowser
-from time import sleep, ctime
 
 def open_link_in_broswer(url):
     
@@ -49,7 +49,7 @@ def parse_args(args):
     v = True              #bool if checking the ssl cert
     t_flag_found = False  #bool if -t was found
     t_nr_found = False    #bool if -t has a value
-    
+
     while i < len(args):
         if not link_found:
             if is_url(args[i]):
@@ -69,16 +69,19 @@ def parse_args(args):
         elif args[i] == '-v':
             v = False
         i += 1
+
     if not link_found:
         print("\nProvide a valid url")
         print("example: https://en.wikipedia.org/wiki/Static_web_page")
         print("")
         correct = False
+
     if t_flag_found and not t_nr_found:
         print("\nProvide a number for the -t flag")
         print("example: -t 30")
         print("")
         correct = False
+
     if correct:
         web_diff(link, r, o, t, w, v)
 
@@ -101,12 +104,12 @@ def web_diff(link, r, o, t, w, v):
     while no_diff:
         print("\nchecking again in " + str(t) + " secs")
         print("-----")
-        sleep(t)
+        time.sleep(t)
         updated_res = get_website_data(link, v)
         print("\nsaved updated(?) site info for: " + link)
-        print("diff checking @ " + str(ctime()))
+        print("diff checking @ " + str(time.ctime()))
         print("-----")
-        no_diff = not is_diff(initial_res,updated_res)
+        no_diff = not is_diff(initial_res, updated_res)
         if not no_diff:
             print("\ndiff found!")
             print("-----")
@@ -117,6 +120,7 @@ def web_diff(link, r, o, t, w, v):
             if r:
                 web_diff(link, r, o, t, w, v)
             else:
+                no_diff = False
                 break
         else:
             print("\nno diff found")
@@ -160,6 +164,5 @@ def main():
     else:
         parse_args(sys.argv)
             
-
 if __name__ == '__main__':
-  main()
+    main()
