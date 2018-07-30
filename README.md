@@ -9,7 +9,9 @@ Fast, simple and configurable check for website changes
 **DOES NOT SHOW ACTUAL CHANGES, JUST CHECKS FOR THEM!**
 
 # More info
-Supporting gui functionality for multi-threading aka opening multiple processes! (windows only)
+Supporting GUI functionality for easy multi-threading aka opening multiple processes! (windows only)
+
+Actual multi-threading is still possible on every platform only through the terminal.
 
 # Install
 Python 3 required
@@ -24,7 +26,7 @@ Terminal-only:
 
     python web_diff.py -flags <website_url>
 
-From terminal to gui:
+From terminal to GUI:
 
     python gui.py
     
