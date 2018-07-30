@@ -14,7 +14,9 @@ Supporting GUI functionality for easy multi-threading aka opening multiple proce
 Actual multi-threading is still possible on every platform only through the terminal.
 
 # Install
-Python 3 required
+Required: Python 3
+Dependencies: requests
+Optional dependencies: appJar (for the GUI)
 
     git clone https://github.com/killerzman/SimpleWebDiff.git
     cd SimpleWebDiff
