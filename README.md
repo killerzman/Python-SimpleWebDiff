@@ -8,17 +8,29 @@ Fast, simple and configurable check for website changes
 
 **DOES NOT SHOW ACTUAL CHANGES, JUST CHECKS FOR THEM!**
 
+# More info
+Supporting gui functionality for multi-threading aka opening multiple processes! (windows only)
+
 # Install
 Python 3 required
 
     git clone https://github.com/killerzman/SimpleWebDiff.git
     cd SimpleWebDiff
     pip install -r requirements.txt
+    pip install -r optional-requirements.txt
 
 # Usage
-Usage:
+Terminal-only:
 
     python web_diff.py -flags <website_url>
+
+From terminal to gui:
+
+    python gui.py
+    
+GUI:
+
+    Open runWIN.vbs
 
 Flags:
 
