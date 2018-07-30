@@ -15,7 +15,9 @@ Actual multi-threading is still possible on every platform only through the term
 
 # Install
 Required: Python 3
+
 Dependencies: requests
+
 Optional dependencies: appJar (for the GUI)
 
     git clone https://github.com/killerzman/SimpleWebDiff.git
